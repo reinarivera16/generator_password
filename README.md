@@ -1,4 +1,4 @@
-# generator_password
+# Password Generator
 
 
 ## STEP 1:: Run This App ON "BROWSER"
