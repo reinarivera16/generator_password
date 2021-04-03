@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="assets/css/grid.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+    .my-card {
+      padding-top: 3rem !important;
+      padding-bottom: 3rem !important;
+      border-radius: 1rem;
+      -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+        0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12),
+        0 2px 4px -1px rgba(0, 0, 0, 0.3);
+      position: relative;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="row valign-wrapper" style="height: 100vh">
+    <!-- BUTTOM FOR GENERATE A PASSWORD -->
+    <div class="col l6 offset-l3 s10 offset-s1 my-card center" id="generateApassword">
+      <div class="btn black">
+        Generate a Password
+      </div>
+    </div>
+    <!-- WINDOW for the length of the password -->
+    <div id="lenBox" class="col l6 offset-l3 s10 offset-s1 my-card hide center">
+      <h5 class="center pt-0">Select Password Length</h5>
+      <div class="col s12 py-3">
+        <p class="range-field">
+          <input type="range" name="passlength" id="passlength" min="8" max="128" value="8" />
+        </p>
+        <div class="input-field">
+          <input type="number" name="" id="inputlength" class="center" value="8" placeholder="Enter Password Length">
+        </div>
+      </div>
+      <div class="col s4 offset-s4 btn black" id="show_passwordcriteria">
+        Next
+      </div>
+    </div>
+    <!-- WINDOW for character types to include in the password -->
+    <div id="passwordcriteria" class="col l6 offset-l3 s10 offset-s1 my-card hide">
+      <h5 class="center py-4">Select Password Criteria</h5>
+      <div class="col s10 offset-s1">
+        <div class="col l6 s12 py-3">
+          <p>
+            <label>
+              <input type="checkbox" name="" id="lcase" class="filled-in" />
+              <span>LowerCase</span>
+            </label>
+          </p>
+        </div>
+        <div class="col l6 s12 py-3">
+          <p>
+            <label>
+              <input type="checkbox" name="" id="ucase" class="filled-in" />
+              <span>UpperCase</span>
+            </label>
+          </p>
+        </div>
+        <div class="col l6 s12 py-3">
+          <p>
+            <label>
+              <input type="checkbox" name="" id="num" class="filled-in" />
+              <span>Number</span>
+            </label>
+          </p>
+        </div>
+        <div class="col l6 s12 py-3">
+          <p>
+            <label>
+              <input type="checkbox" name="" id="special_char" class="filled-in" />
+              <span>Special Character</span>
+            </label>
+          </p>
+        </div>
+      </div>
+      <div class="col s12 center">
+        <div class=" btn black mt-5" id="getpassword" disabled>
+          Get Password
+        </div>
+      </div>
+
+    </div>
+    <!-- password generated WINDOW-->
+    <div id="generatedpassword" class="col l6 offset-l3 s10 offset-s1 my-card hide center">
+      <h5 class="mb-3 p-0">New Password</h5>
+      <div class="col s12 mb-3">
+
+        <p id="newpassword" class="px-5 py-2" style="word-wrap: break-word;background-color: #dedede;"></p>
+
+      </div>
+      <div id="generatenew" class="btn black mb-2">Generate New</div>
+      <div id="backtohome" class="btn blue-grey mb-2">Back TO Home</div>
+    </div>
+
+  </div>
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
