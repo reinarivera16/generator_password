@@ -34,4 +34,4 @@ THEN the password is displayed on the page
 ## Deployed Site
 
 ```
-https://github.com/reinarivera16/
+ https://reinarivera16.github.io/generator_password/
